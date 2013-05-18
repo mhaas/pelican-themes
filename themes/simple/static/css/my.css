@@ -1,0 +1,28 @@
+img.right, figure.right { 
+    float: right;
+    box-shadow: 10px 10px 5px #888;
+}
+
+ul {
+    /* default: disc */
+    list-style-type: circle;
+    /* shift left one column*/
+    margin-left: 30px;
+}
+
+ol {
+    list-style-type: decimal;
+    /* shift left one column */
+    margin-left: 30px;
+}
+
+
+/* From notmyidea theme */
+/* nav#menu  ul {list-style: none; margin: 0 auto; width: 690px;} */
+nav#menu  li {
+    float: left;
+    display: inline;
+    /* top right bottom left */
+    margin: 1em 1em 1em 1em;
+}
+

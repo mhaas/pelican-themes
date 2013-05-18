@@ -1,0 +1,104 @@
+/* Superset item date */
+span.item-date {
+    font-size: small;
+    vertical-align: super;
+}
+
+/* Make ressources items take up less space */
+
+div.item-ressources ul li  {
+    margin-bottom: 0.5em;
+    font-size: 90%;
+    display: inline-block;
+}
+
+
+/* These need to display inline to make -> insertion work - otherwise
+ *   <p> will be displayed as block, inserting linebreaks
+ *
+ */
+div.item-ressources ul li p {
+    display: inline;
+    margin: 0px;
+    position: relative;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* 
+ * Add arrow in front of ressources items
+ * http://www.yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/
+ *
+ */
+div.item-ressources ul li:before {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 5px solid transparent;
+    border-left-color: #333;
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
+
+/*  Item ressources header.
+    Do not use regular header font, just make it look like normal
+    bold text.
+*/
+h3.item-ressources-header {
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+/* Format CV dates */
+span.cv-date {
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+/* Put translations selector to the right */
+/* border-color is link color */
+div#translations, .post-info, .paginator {
+    border: 2px solid;
+    border-color: #C74350;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 90%;
+}
+
+#translations {
+    float: right;
+}
+
+.paginator {
+    display: inline;
+    float: left;
+}
+
+/*
+a:hover img, a:active img {
+    color: #000000; 
+    text-shadow: 0px 0px 0px #000000;
+}
+*/
+
+/* Xing icon */
+.social a[href*='xing.com'] {background-image: url('../images/icons/xing-small.png');}
+
+#extras .validators {
+    float: right;
+}
+
+#extras .social {
+
+    float: left;
+
+}
+
+#contentinfo {
+    font-size: smaller;
+}
+
