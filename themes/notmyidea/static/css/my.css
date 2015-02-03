@@ -9,7 +9,7 @@ span.item-date {
 div.item-ressources ul li  {
     margin-bottom: 0.5em;
     font-size: 90%;
-    display: inline-block;
+    display: block;
 }
 
 
