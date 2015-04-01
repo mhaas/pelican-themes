@@ -42,6 +42,15 @@ div.item-ressources ul li:before {
 }
 
 
+/**
+ * In recent articles, the entries are typically small so they go next
+ * to each other.
+ */
+section.recent-articles footer div.item-ressources ul li {
+    margin-right: 1em;
+    display: inline;
+}
+
 /*  Item ressources header.
     Do not use regular header font, just make it look like normal
     bold text.
@@ -102,3 +111,44 @@ a:hover img, a:active img {
     font-size: smaller;
 }
 
+/** In recent articles, address (for author) is inline so it takes
+ * up less space.
+ */
+section.recent-articles .entry-content address {
+    display: inline;
+}
+
+/**
+ * Recent articles is a bit smaller
+ */
+section.recent-articles {
+    font-size: 95%;
+}
+
+/**
+ * Make recent articles more compact
+ */
+section.recent-articles article.hentry {
+    padding: 0px;
+}
+
+/**
+ * Footer needs to be closer to article excerpt
+ */
+section.recent-articles article.hentry p {
+    margin: 0px;
+}
+
+section.recent-articles article.hentry footer ul {
+    margin: 0px;
+}
+
+/**
+ * Inside recent articles, we make the heading smaller.
+ * Articles typically start with a h2, and we likely have used
+ * h3 before
+ */
+
+section.recent-articles article.hentry h1, h2 {
+    font-size: 1.429em;
+}

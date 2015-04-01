@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block content %}        
+<section id="content" class="body">
+    {% import 'translations.html' as translations with context %}
+    <div id="translations">
+    {{ translations.translations_for(page) }}
+    </div> 
+    <h1 class="entry-title">{{ page.title }}</h1>
+    {% if PDF_PROCESSOR %}<a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">get
+    the pdf</a>{% endif %}
+    {{ page.content }}
+    {% if articles %}
+        <section class="recent-articles">
+        {% for article in articles %}        
+            {% if loop.first %}
+                <h2 class="entry-title">Recent Articles</h2>
+                <ol id="posts-list" class="hfeed">
+            {% endif %}
+            <li><article class="hentry">    
+                <header>
+                    <h3 class=""><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+                           title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
+                </header>
+                <div class="entry-content">
+                {{ article.summary }}
+                <footer>
+                    <div class="item-ressources"><ul>
+                        <li> <a class="recent-readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a> </li>
+                        <li> <a href="{{ SITEURL }}/{{ article.category.url }}">In [{{ article.category }}]</a> </li>
+                    </ul></div> <!-- .item-ressources --> 
+                {% include 'comments.html' %}
+                </footer>
+                </div><!-- /.entry-content -->
+            </article></li>
+            {% if loop.last %}
+                </ol><!-- /#posts-list -->
+            {% endif %}
+        {% endfor %}
+        </section>
+    {% endif %}
+    </section>
+{% endblock %}
